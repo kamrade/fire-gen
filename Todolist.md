@@ -1,5 +1,6 @@
 ## Features
 [ ] Setup HMR
+[ ] Setup AOT
 
 ## Library Components
 [ ] Button
@@ -9,6 +10,7 @@
 
 ## Modules
 [ ] Setup Bootstrap base design system
+[ ] Setup icons module
 
 ## Data
 

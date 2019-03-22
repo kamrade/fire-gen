@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: top;
+}
+
+.cp-icon-inline {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: top;
+
+  svg {
+    position: relative;
+  }
+}
