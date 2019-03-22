@@ -1,4 +1,17 @@
+@mixin ghost-button() {
+  transition: background .2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+}
+
 .btn-cap {
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.ghost-button {
+  @include ghost-button();
 }

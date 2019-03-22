@@ -1,5 +1,24 @@
 @import '~src/assets/scss/bootstrap/variables';
 
 .fire-header {
-  border-bottom: 1px solid $gray-300;
+  text-align: center;
+  background-color: $white;
+
+  .top-part {
+    padding: $spacer/2;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  .bottom-part {
+    padding: $spacer*2;
+  }
+
+  .header-title {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $gray-700;
+    margin-bottom: 0;
+  }
 }
