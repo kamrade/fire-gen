@@ -1,0 +1,9 @@
+@mixin clickable($color) {
+  transition: background .2s ease-in-out;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $color;
+  }
+}

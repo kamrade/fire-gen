@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import {TabItem} from 'src/app/shared/models/tab-item.model';
 
@@ -9,14 +9,8 @@ import {TabItem} from 'src/app/shared/models/tab-item.model';
 })
 export class TabsComponent {
 
-  tabItems: TabItem[] = [{
-    title: 'Customers',
-    value: 'customers',
-    id: '1'
-  }, {
-    title: 'Contracts',
-    value: 'contracts',
-    id: '2'
-  }];
+  @Input() tabItems: TabItem[]
+  activeTabPos: number = 0;
+  activeTabWidth: number = 0;
 
 }

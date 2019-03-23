@@ -1,3 +1,11 @@
 <div class="fire-tab-item">
-  {{tabItem.title}}
+  <a
+    #fireTabLink
+    class="tab-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+    [routerLinkActive]="'active-link'"
+    [routerLink]="tabItem.link">
+
+    {{tabItem.title}}
+  </a>
 </div>

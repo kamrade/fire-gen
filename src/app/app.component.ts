@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {navigation} from 'src/app/const/navigation';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fire-gen';
+  navigation = navigation;
 }

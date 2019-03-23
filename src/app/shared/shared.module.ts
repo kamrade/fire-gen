@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import {IconsModule} from 'src/app/icons/icons.module';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -14,7 +15,8 @@ import { TabItemComponent } from './components/tabs/tab-item/tab-item.component'
   ],
   imports: [
     CommonModule,
-    IconsModule
+    IconsModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
