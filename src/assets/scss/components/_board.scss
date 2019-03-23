@@ -1,0 +1,21 @@
+.fire-board {
+  background-color: $white;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+
+  .fire-board-header {
+    padding: $spacer;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  .fire-board-body {
+    padding: $spacer;
+  }
+
+  .fire-board-header-title {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+}

@@ -3,14 +3,19 @@
 
 .fire-tab-item {
   position: relative;
-  margin-bottom: $spacer/2;
+  // margin-bottom: $spacer/2;
 
   .tab-link {
+    display: inline-block;
     color: $gray-900;
-    padding: $spacer/4;
+    padding: $spacer/2;
     @include clickable($gray-200);
+    border-radius: $border-radius $border-radius 0 0;
 
     &.active-link {
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     &:hover {

@@ -4,4 +4,15 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid $gray-200;
+  position: relative;
+
+  .fire-tabs-active-link {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    background-color: $primary;
+    transition: left .2s ease-in-out, width .4s ease-in-out;
+  }
 }

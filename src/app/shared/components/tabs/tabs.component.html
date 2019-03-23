@@ -1,6 +1,8 @@
-<div class="fire-tabs">
+<div #fireTabs class="fire-tabs">
   <div *ngFor="let item of tabItems" class="tab">
-    <app-tab-item [tabItem]="item"></app-tab-item>
+    <app-tab-item (size)="getActiveTabSize($event)" [tabItem]="item"></app-tab-item>
   </div>
+
+  <div [style.left]="x + 'px'" [style.width]="width + 'px'" class="fire-tabs-active-link"></div>
 
 </div>
