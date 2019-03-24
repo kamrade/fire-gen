@@ -11,14 +11,25 @@ import {CustomersService} from 'src/app/customers/services/customers.service';
 export class CustomerViewComponent implements OnInit {
 
   @Input() customer: Customer;
+  isEditMode = false;
 
   constructor(public customersService: CustomersService) { }
 
   ngOnInit() {
   }
 
+  toggleMode() {
+    if (this.isEditMode) {
+      this.update();
+    }
+    this.isEditMode = !this.isEditMode;
+  }
+
+  update() {
+    console.log('::: update');
+  }
+
   remove() {
-    console.log('::: remove');
     this.customersService.deleteCustomer(this.customer.id)
       .subscribe((res) => console.log(res));
   }

@@ -25,8 +25,8 @@ export class CustomerFormComponent {
       .addCustomer(formContent)
       .subscribe(res => {
         this.inProcess = false;
+        f.reset();
       });
-    f.reset();
   }
 
 }
