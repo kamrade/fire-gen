@@ -9,6 +9,7 @@ $tooltip-bg-color: $gray-700;
 }
 
 .tooltip-container {
+  font-family: sans-serif;
   top: 0;
   left: 0;
   background-color: $tooltip-bg-color;
@@ -18,14 +19,15 @@ $tooltip-bg-color: $gray-700;
   position: fixed;
   z-index: $zindex-tooltip;
   font-size: 12px;
+  letter-spacing: 0.25px;
   line-height: 14px;
   transform: translateY(-100%) translateX(-50%);
   text-align: center;
+  max-width: 320px;
 
   &.light {
     background-color: $gray-200;
     color: $gray-900;
-    // box-shadow: 0 0 4px rgba(0,0,0,0.09);
     border: 1px solid $gray-300;
 
     &::after {

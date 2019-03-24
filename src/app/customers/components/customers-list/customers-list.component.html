@@ -1,0 +1,6 @@
+<div class="fire-customers-list">
+  <app-customer-form></app-customer-form>
+  <ng-container *ngFor="let customer of customers$ | async">
+    <app-customer-view [customer]="customer"></app-customer-view>
+  </ng-container>
+</div>

@@ -1,0 +1,49 @@
+<div class="fire-customer-form" [ngClass]="{'disabled': inProcess}">
+
+  <form #f="ngForm" (submit)="addNewCustomer($event, f)" novalidate>
+    <div class="row">
+
+      <div class="col-md-5 form-group">
+        <input
+          [disabled]="inProcess"
+          ngModel required #name="ngModel"
+          placeholder="Customer Name…"
+          name="name"
+          class="form-control">
+      </div>
+
+      <div class="col-md-3 form-group">
+        <input
+          [disabled]="inProcess"
+          ngModel required #turnover="ngModel"
+          placeholder="Turnover…"
+          name="turnover"
+          class="form-control">
+      </div>
+
+      <div class="col-md-2 form-group">
+        <input
+          [disabled]="inProcess"
+          ngModel required #currency="ngModel"
+          placeholder="Currency…"
+          name="currency"
+          class="form-control">
+      </div>
+
+      <div class="col-md-2 form-group">
+        <button
+          [disabled]="inProcess"
+          type="submit"
+          class="btn btn-block btn-success button-add">
+            <ng-template *ngIf="!inProcess">
+              <app-icon-inline iconName='ok_md20_white'></app-icon-inline>
+            </ng-template>
+            <span *ngIf="!inProcess" class="button-add-text">Add</span>
+            <span *ngIf="inProcess" class="button-add-text">Adding…</span>
+          </button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

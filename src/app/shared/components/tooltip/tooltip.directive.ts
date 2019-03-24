@@ -29,7 +29,6 @@ export class TooltipDirective {
   ) { }
 
   @HostListener('mouseover', ['$event']) onMouseHover(event: MouseEvent) {
-    console.log('::: mouseover');
     if (!this.autoShowHide || this.showOnClick) {
       return;
     }
@@ -40,7 +39,6 @@ export class TooltipDirective {
   }
 
   @HostListener('mouseleave') hideTooltip() {
-    // console.log('::: tooltip:out');
     if (this.contentCmpRef) {
       this.contentCmpRef.destroy(); //уничтожаем сам компонент
       this.isClear = true;
@@ -69,9 +67,7 @@ export class TooltipDirective {
     componentFactory = this._componentFactoryResolver.resolveComponentFactory(TooltipComponent);
     this.contentCmpRef = this._viewContainerRef.createComponent(componentFactory);
     this._document.querySelector('body').appendChild(this.contentCmpRef.location.nativeElement);
-
     this.contentCmpRef.instance.options = options;
-    // this.contentCmpRef.instance.tooltipText = this.tooltipText;
     this.isClear = false;
   }
 

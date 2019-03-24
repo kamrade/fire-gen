@@ -1,0 +1,46 @@
+<div class="fire-customer-view">
+  <div class="row">
+
+    <div class="col-md-5 form-group">
+      <div class="view-control-field">
+        <span class="view-control-field-inner view-control-field-text">{{customer.name}}</span>
+        <span class="view-control-field-inner view-control-field-icon">
+          <app-icon-inline iconName='edit_md20'></app-icon-inline>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-3 form-group">
+      <div class="view-control-field">
+        <span class="view-control-field-inner view-control-field-text">{{customer.turnover}}</span>
+        <span class="view-control-field-inner view-control-field-icon">
+          <app-icon-inline iconName='edit_md20'></app-icon-inline>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-2 form-group">
+      <div class="view-control-field">
+        <span class="view-control-field-inner view-control-field-text">{{customer.currency}}</span>
+        <span class="view-control-field-inner view-control-field-icon">
+          <app-icon-inline iconName='edit_md20'></app-icon-inline>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-2 form-group">
+      <div class="buttons-block">
+
+        <button class="btn btn-secondary">
+          <app-icon-inline iconName='edit_md20'></app-icon-inline>
+        </button>
+
+        <button (click)="remove()" class="btn mt-0 btn-secondary button-remove">
+          <app-icon-inline iconName='trash_md20'></app-icon-inline>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

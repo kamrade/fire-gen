@@ -1,0 +1,51 @@
+@import '~src/assets/scss/bootstrap/variables';
+@import '~src/assets/scss/bootstrap/mixins';
+
+
+.fire-customer-view {
+
+  .view-control-field {
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    border: $border-width solid transparent;
+    transition: background .2s ease-in-out;
+    border-radius: $border-radius;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $gray-100;
+
+      .view-control-field-icon {
+        opacity: 1;
+      }
+    }
+
+    .view-control-field-inner {
+      display: block;
+    }
+
+    .view-control-field-icon {
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+    }
+
+    .view-control-field-text {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .buttons-block {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      margin-right: $spacer/4;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+}

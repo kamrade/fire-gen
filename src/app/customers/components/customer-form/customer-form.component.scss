@@ -1,0 +1,36 @@
+@import '~src/assets/scss/bootstrap/variables';
+@import '~src/assets/scss/bootstrap/mixins';
+
+.fire-customer-form {
+  padding: $spacer $spacer 0;
+  margin: 0 -1 * $spacer;
+  background-color: $gray-100;
+  margin-bottom: $spacer;
+  position: relative;
+
+  &.disabled {
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      opacity: .6;
+    }
+  }
+
+  .form-control {
+    border-color: transparent;
+  }
+
+  .button-add-text {
+    display: inline-block;
+    margin-left: $spacer/4;
+  }
+
+}

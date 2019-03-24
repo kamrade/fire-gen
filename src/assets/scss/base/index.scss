@@ -1,0 +1,47 @@
+// selection color
+::-moz-selection {
+  color: $white;
+  background: $primary;
+}
+::selection {
+  color: $white;
+  background: $primary;
+}
+
+// remove IE clear button
+input::-ms-clear {
+  display: none;
+}
+// remove IE clear button for sure
+::-ms-clear {
+  width : 0;
+  height: 0;
+}
+
+// remove safari autofill
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $gray-500 !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $gray-500 !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $gray-500 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $gray-500 !important;
+}
+
+input:read-only,
+textarea:read-only,
+[contenteditable]:read-only {
+  // cursor: not-allowed;
+}

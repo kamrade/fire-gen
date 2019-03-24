@@ -17,13 +17,14 @@
     * Make it sticky
 [ ] Dropdown
 [ ] Tooltip
+    * Adaptive behavior in dependence of screen position.
 [ ] Modal
     * ModalHeader, ModalBody, ModalFooter
 
 ## Priority
 * Tooltip
-* Dropdown
 * Customers CRUD
 * Unit testing
+* Dropdown
 
 ## Log
