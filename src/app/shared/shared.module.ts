@@ -11,6 +11,8 @@ import { BoardHeaderComponent } from './components/board/board-header/board-head
 import { BoardBodyComponent } from './components/board/board-body/board-body.component';
 import { BoardFooterComponent } from './components/board/board-footer/board-footer.component';
 import { BoardTitleComponent } from './components/board/board-title/board-title.component';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { TooltipDirective } from './components/tooltip/tooltip.directive';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,17 @@ import { BoardTitleComponent } from './components/board/board-title/board-title.
     BoardHeaderComponent,
     BoardBodyComponent,
     BoardFooterComponent,
-    BoardTitleComponent
+    BoardTitleComponent,
+    TooltipComponent,
+    TooltipDirective
   ],
   imports: [
     CommonModule,
     IconsModule,
     RouterModule
+  ],
+  entryComponents: [
+    TooltipComponent
   ],
   exports: [
     HeaderComponent,
@@ -36,7 +43,9 @@ import { BoardTitleComponent } from './components/board/board-title/board-title.
     BoardHeaderComponent,
     BoardBodyComponent,
     BoardFooterComponent,
-    BoardTitleComponent
+    BoardTitleComponent,
+    TooltipComponent,
+    TooltipDirective,
   ]
 })
 export class SharedModule { }

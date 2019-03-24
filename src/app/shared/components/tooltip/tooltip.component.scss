@@ -1,0 +1,53 @@
+@import '~src/assets/scss/bootstrap/variables';
+@import '~src/assets/scss/bootstrap/mixins';
+
+$tooltip-color: $white;
+$tooltip-bg-color: $gray-700;
+
+:host {
+  display: block;
+}
+
+.tooltip-container {
+  top: 0;
+  left: 0;
+  background-color: $tooltip-bg-color;
+  color: $tooltip-color;
+  padding: 5px;
+  border-radius: $border-radius-sm;
+  position: fixed;
+  z-index: $zindex-tooltip;
+  font-size: 12px;
+  line-height: 14px;
+  transform: translateY(-100%) translateX(-50%);
+  text-align: center;
+
+  &.light {
+    background-color: $gray-200;
+    color: $gray-900;
+    // box-shadow: 0 0 4px rgba(0,0,0,0.09);
+    border: 1px solid $gray-300;
+
+    &::after {
+      border-top: 8px solid $gray-200;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid $tooltip-bg-color;
+    z-index: $zindex-tooltip + 1;
+  }
+
+  .tooltip-text {
+
+  }
+}

@@ -1,0 +1,9 @@
+<div
+  #tooltip
+  [ngStyle]="{'top.px': options.y - 2, 'left.px': options.x + options.width/2}"
+  class="tooltip-container"
+  [ngClass]="{'dark': options.tooltipStyle === 'dark', 'light': options.tooltipStyle === 'light'}">
+
+  <span class="tooltip-text">{{options.content}}</span>
+
+</div>
