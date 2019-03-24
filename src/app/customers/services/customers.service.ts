@@ -21,13 +21,20 @@ export class CustomersService {
   }
 
   public addCustomer(newCustomer: Customer) {
-
     newCustomer.id = uuidv1();
+
+    this.customers.push({
+      name: 'Processing…',
+      turnover: 'Processing…',
+      currency: 'Processing…',
+      id: uuidv1()
+    });
 
     return of(0)
       .pipe(delay(2500))
       .pipe(
         map((res) => {
+          this.customers.pop();
           this.customers.push(newCustomer);
           return res;
         })
