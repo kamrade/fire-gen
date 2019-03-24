@@ -4,6 +4,7 @@ import { fromEvent, interval, timer } from 'rxjs';
 import { throttle, debounce } from 'rxjs/operators';
 
 import {TabItem} from 'src/app/shared/models/tab-item.model';
+import {WindowEventsService} from 'src/app/shared/services/window-events.service';
 
 @Component({
   selector: 'app-tab-item',
@@ -18,13 +19,12 @@ export class TabItemComponent {
   @Output() size: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild(RouterLinkActive, { read: ElementRef }) activeRouteEl: ElementRef;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private windowEvents: WindowEventsService) {
 
-    this.resize = fromEvent(window, 'resize');
-    this.resize
-      .pipe(throttle( val => interval(200) ))
-      .pipe(debounce(() => timer(200)))
-      .subscribe(event => this.setParameters() );
+    windowEvents.getResize()
+      .subscribe(($event) => {
+        this.setParameters()
+      });
 
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {

@@ -2,6 +2,8 @@
 [ ] Setup HMR
 [ ] Setup AOT
 [ ] TDD
+[ ] Connect to store ngrx
+[ ] Unit test
 
 ## Components
 [ ] Header
@@ -11,3 +13,17 @@
     * Create component Board, BoardHeader, BoardBody, BoardFooter.
 [ ] Button
     * Create component Button with options.
+[ ] Header
+    * Make it sticky
+[ ] Dropdown
+[ ] Tooltip
+[ ] Modal
+    * ModalHeader, ModalBody, ModalFooter
+
+## Priority
+* Tooltip
+* Dropdown
+* Customers CRUD
+* Unit testing
+
+## Log

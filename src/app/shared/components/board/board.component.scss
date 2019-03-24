@@ -1,0 +1,7 @@
+@import '~src/assets/scss/bootstrap/variables';
+@import '~src/assets/scss/bootstrap/mixins';
+
+.fire-board {
+  background-color: $white;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
