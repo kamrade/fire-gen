@@ -12,11 +12,16 @@ import {Observable} from 'rxjs';
 export class CustomersListComponent implements OnInit {
 
   customers$: Observable<Customer[]>;
+  editMode = false;
 
   constructor(public customersService: CustomersService) { }
 
   ngOnInit() {
     this.customers$ = this.customersService.getCustomers();
+  }
+
+  editModeHandler($event) {
+    this.editMode = $event;
   }
 
 }

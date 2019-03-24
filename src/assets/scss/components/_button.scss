@@ -15,3 +15,7 @@
 .ghost-button {
   @include ghost-button();
 }
+
+.btn[disabled] {
+  opacity: .4;
+}

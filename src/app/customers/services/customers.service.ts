@@ -38,7 +38,7 @@ export class CustomersService {
   public deleteCustomer(id) {
 
     return of(0)
-      .pipe(delay(500))
+      .pipe(delay(1500))
       .pipe(
         map(res => {
           let indexToRemove;

@@ -1,4 +1,4 @@
-<div class="fire-customer-form" [ngClass]="{'disabled': inProcess}">
+<div class="fire-customer-form" [ngClass]="{'disabled': inProcess || globalEdit}">
 
   <form #f="ngForm" (submit)="addNewCustomer($event, f)" novalidate>
     <div class="row">

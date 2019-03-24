@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import {Customer} from 'src/app/customers/models/customer.model';
@@ -11,6 +11,8 @@ import {CustomersService} from 'src/app/customers/services/customers.service';
 })
 export class CustomerFormComponent {
 
+  @Input() globalEdit: boolean;
+  @Output() editMode: EventEmitter<any> = new EventEmitter<any>();
   inProcess = false;
 
   constructor(public customersService: CustomersService) { }
@@ -20,11 +22,13 @@ export class CustomerFormComponent {
     const formContent: Customer = f.value;
 
     this.inProcess = true;
+    this.editMode.emit(true);
 
     this.customersService
       .addCustomer(formContent)
       .subscribe(res => {
         this.inProcess = false;
+        this.editMode.emit(false);
         f.reset();
       });
   }
