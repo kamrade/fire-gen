@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChange, Input, Output, EventEmitter, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 import {Customer} from 'src/app/customers/models/customer.model';
 import {CustomersService} from 'src/app/customers/services/customers.service';
@@ -8,14 +8,14 @@ import {CustomersService} from 'src/app/customers/services/customers.service';
   templateUrl: './customer-view.component.html',
   styleUrls: ['./customer-view.component.scss']
 })
-export class CustomerViewComponent implements OnInit, OnChange {
+export class CustomerViewComponent implements OnInit, OnChanges {
 
   @Input() customer: Customer;
   @Input() globalEdit: boolean;
   isEditMode = false;
   isRemoving = false;
 
-  @ViewChild('focusFirst') focusFirst: TemplateRef<any>;
+  @ViewChild('focusFirst') focusFirst: ElementRef<any>;
 
   @Output() editMode: EventEmitter<any> = new EventEmitter<any>();
 
@@ -23,8 +23,8 @@ export class CustomerViewComponent implements OnInit, OnChange {
 
   ngOnInit() {}
 
-  ngOnChange() {
-    console.log(this.focusFirst);
+  ngOnChanges() {
+    // console.log(this.focusFirst);
   }
 
   toggleMode() {

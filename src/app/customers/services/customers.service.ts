@@ -25,7 +25,7 @@ export class CustomersService {
 
     this.customers.push({
       name: 'Processing…',
-      turnover: 'Processing…',
+      turnover: 0.00,
       currency: 'Processing…',
       id: uuidv1()
     });
