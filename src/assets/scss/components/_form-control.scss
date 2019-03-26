@@ -5,3 +5,21 @@
 .form-control-lg {
   height: 50px;
 }
+
+.form-control {
+  color: $gray-900;
+
+  &:focus {
+    color: $gray-900;
+  }
+
+  &.form-control-ghost {
+    border-color: $gray-100;
+    background-color: $gray-100;
+
+    &:disabled {
+      background-color: $gray-200;
+      opacity: .5;
+    }
+  }
+}

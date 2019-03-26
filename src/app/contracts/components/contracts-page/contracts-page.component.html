@@ -1,3 +1,36 @@
 <div class="fire-contacts-page">
-  <span appTooltip tooltipText="Board title tooltip">CONTRACTS PAGE</span>
+  <!-- <span appTooltip tooltipText="Board title tooltip">CONTRACTS PAGE</span> -->
+
+  <fire-board>
+
+    <fire-board-header>
+      <fire-board-title>
+        <span fireTooltip tooltipText="This is Contracts Page">Contracts</span>
+      </fire-board-title>
+    </fire-board-header>
+
+    <fire-board-body>
+
+      <fire-form-group>
+        <input fireTextField fireGhost="true" placeholder="Basic TextField" [(ngModel)]="value" />
+      </fire-form-group>
+
+      <fire-form-group>
+        <input fireTextField fireGhost="true" fireSize="sm" placeholder="Basic TextField" [(ngModel)]="value" />
+      </fire-form-group>
+
+      <fire-form-group>
+        <input fireTextField fireGhost="true" fireSize="lg" placeholder="Basic TextField" [(ngModel)]="value" />
+      </fire-form-group>
+
+      <fire-form-group>
+        <input fireTextField fireSize="md" placeholder="Basic TextField" [(ngModel)]="value" />
+      </fire-form-group>
+
+      <fire-form-group>
+        <input fireTextField fireSize="md" fireGhost="true" disabled placeholder="Basic TextField" [(ngModel)]="value" />
+      </fire-form-group>
+
+    </fire-board-body>
+  </fire-board>
 </div>

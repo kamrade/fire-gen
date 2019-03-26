@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 import {IconsModule} from 'src/app/icons/icons.module';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +15,8 @@ import { BoardFooterComponent } from './components/board/board-footer/board-foot
 import { BoardTitleComponent } from './components/board/board-title/board-title.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { TooltipDirective } from './components/tooltip/tooltip.directive';
+import { TextFieldDirective } from './components/text-field-base/text-field.directive';
+import { FormGroupComponent } from './components/form-group/form-group.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,15 @@ import { TooltipDirective } from './components/tooltip/tooltip.directive';
     BoardFooterComponent,
     BoardTitleComponent,
     TooltipComponent,
-    TooltipDirective
+    TooltipDirective,
+    TextFieldDirective,
+    FormGroupComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    RouterModule,
     IconsModule,
-    RouterModule
   ],
   entryComponents: [
     TooltipComponent
@@ -46,6 +53,8 @@ import { TooltipDirective } from './components/tooltip/tooltip.directive';
     BoardTitleComponent,
     TooltipComponent,
     TooltipDirective,
+    TextFieldDirective,
+    FormGroupComponent
   ]
 })
 export class SharedModule { }

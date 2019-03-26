@@ -1,5 +1,5 @@
 import {
-  Directive, HostListener, OnInit, Input,
+  Directive, HostListener, Input,
   ElementRef, ComponentFactoryResolver,
   ViewContainerRef, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
@@ -8,7 +8,7 @@ import { ContentOptions } from './tooltip.model';
 import { TooltipComponent } from './tooltip.component';
 
 @Directive({
-  selector: '[appTooltip]'
+  selector: '[fireTooltip]'
 })
 export class TooltipDirective {
 
