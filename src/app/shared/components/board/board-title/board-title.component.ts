@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-board-title',
+  selector: 'fire-board-title',
   templateUrl: './board-title.component.html',
   styleUrls: ['./board-title.component.scss']
 })

@@ -3,7 +3,7 @@ import { Component, Input, ViewChild, TemplateRef, AfterViewInit, ElementRef } f
 import {TabItem} from 'src/app/shared/models/tab-item.model';
 
 @Component({
-  selector: 'app-tabs',
+  selector: 'fire-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss']
 })

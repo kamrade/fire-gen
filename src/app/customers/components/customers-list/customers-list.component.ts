@@ -5,7 +5,7 @@ import {Customer} from 'src/app/customers/models/customer.model';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-customers-list',
+  selector: 'fire-customers-list',
   templateUrl: './customers-list.component.html',
   styleUrls: ['./customers-list.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-board-header',
+  selector: 'fire-board-header',
   templateUrl: './board-header.component.html',
   styleUrls: ['./board-header.component.scss']
 })

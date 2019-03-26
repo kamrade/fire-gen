@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import icons from './icons/icons';
 
 @Component({
-  selector: 'app-icon-inline',
+  selector: 'fire-icon-inline',
   templateUrl: './icon-inline.component.html',
   styleUrls: ['./icon-inline.component.scss']
 })

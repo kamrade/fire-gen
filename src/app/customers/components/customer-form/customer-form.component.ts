@@ -5,7 +5,7 @@ import {Customer} from 'src/app/customers/models/customer.model';
 import {CustomersService} from 'src/app/customers/services/customers.service';
 
 @Component({
-  selector: 'app-customer-form',
+  selector: 'fire-customer-form',
   templateUrl: './customer-form.component.html',
   styleUrls: ['./customer-form.component.scss']
 })

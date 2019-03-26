@@ -4,7 +4,7 @@ import { EnterLeaveOpacityDelayAnimation } from 'src/app/animations/';
 import { ContentOptions } from './tooltip.model';
 
 @Component({
-  selector: 'app-tooltip',
+  selector: 'fire-tooltip',
   host: {
     '[style.display]': "'block'",
     '[style.overflow]': "'hidden'",

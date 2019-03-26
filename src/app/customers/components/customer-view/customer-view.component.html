@@ -33,7 +33,7 @@
         <div (click)="toggleMode()" class="view-control-field">
           <span class="view-control-field-inner view-control-field-text">{{customer.name}}</span>
           <span class="view-control-field-inner view-control-field-icon">
-            <app-icon-inline iconName='edit_md20'></app-icon-inline>
+            <fire-icon-inline iconName='edit_md20'></fire-icon-inline>
           </span>
         </div>
       </div>
@@ -42,7 +42,7 @@
         <div (click)="toggleMode()" class="view-control-field">
           <span class="view-control-field-inner view-control-field-text">{{customer.turnover}}</span>
           <span class="view-control-field-inner view-control-field-icon">
-            <app-icon-inline iconName='edit_md20'></app-icon-inline>
+            <fire-icon-inline iconName='edit_md20'></fire-icon-inline>
           </span>
         </div>
       </div>
@@ -51,7 +51,7 @@
         <div (click)="toggleMode()" class="view-control-field">
           <span class="view-control-field-inner view-control-field-text">{{customer.currency}}</span>
           <span class="view-control-field-inner view-control-field-icon">
-            <app-icon-inline iconName='edit_md20'></app-icon-inline>
+            <fire-icon-inline iconName='edit_md20'></fire-icon-inline>
           </span>
         </div>
       </div>
@@ -67,10 +67,10 @@
             class="btn" [ngClass]="{'btn-secondary': !isEditMode, 'btn-success': isEditMode}">
 
             <ng-template [ngIf]="isEditMode">
-              <app-icon-inline iconName='ok_md20_white'></app-icon-inline>
+              <fire-icon-inline iconName='ok_md20_white'></fire-icon-inline>
             </ng-template>
             <ng-template [ngIf]="!isEditMode">
-              <app-icon-inline iconName='edit_md20'></app-icon-inline>
+              <fire-icon-inline iconName='edit_md20'></fire-icon-inline>
             </ng-template>
           </button>
         </ng-template>
@@ -79,7 +79,7 @@
           <button
             [disabled]="globalEdit && !isEditMode"
             (click)="remove()" class="btn mt-0 btn-secondary button-remove">
-            <app-icon-inline iconName='trash_md20'></app-icon-inline>
+            <fire-icon-inline iconName='trash_md20'></fire-icon-inline>
           </button>
         </ng-template>
 
@@ -90,7 +90,7 @@
         <ng-template [ngIf]="isEditMode">
           <button
             (click)="reset()" class="btn btn-secondary">
-            <app-icon-inline iconName='reset_md20'></app-icon-inline>
+            <fire-icon-inline iconName='reset_md20'></fire-icon-inline>
           </button>
         </ng-template>
 

@@ -1,6 +1,6 @@
 <div class="fire-customers-list">
-  <app-customer-form (editMode)="editModeHandler($event)" [globalEdit]="editMode"></app-customer-form>
+  <fire-customer-form (editMode)="editModeHandler($event)" [globalEdit]="editMode"></fire-customer-form>
   <ng-container *ngFor="let customer of customers$ | async">
-    <app-customer-view [globalEdit]="editMode" (editMode)="editModeHandler($event)" [customer]="customer"></app-customer-view>
+    <fire-customer-view [globalEdit]="editMode" (editMode)="editModeHandler($event)" [customer]="customer"></fire-customer-view>
   </ng-container>
 </div>

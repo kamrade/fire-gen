@@ -7,7 +7,7 @@ import {TabItem} from 'src/app/shared/models/tab-item.model';
 import {WindowEventsService} from 'src/app/shared/services/window-events.service';
 
 @Component({
-  selector: 'app-tab-item',
+  selector: 'fire-tab-item',
   templateUrl: './tab-item.component.html',
   styleUrls: ['./tab-item.component.scss']
 })

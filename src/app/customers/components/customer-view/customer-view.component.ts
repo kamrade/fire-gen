@@ -4,7 +4,7 @@ import {Customer} from 'src/app/customers/models/customer.model';
 import {CustomersService} from 'src/app/customers/services/customers.service';
 
 @Component({
-  selector: 'app-customer-view',
+  selector: 'fire-customer-view',
   templateUrl: './customer-view.component.html',
   styleUrls: ['./customer-view.component.scss']
 })
