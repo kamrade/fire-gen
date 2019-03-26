@@ -6,3 +6,7 @@
     * Tabs
     * Button
     * FormControl
+
+
+## Issues
+* Now I use :ng-deep selector inside InputGroup component. Need to find alternative.

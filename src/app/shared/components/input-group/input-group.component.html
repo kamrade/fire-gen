@@ -1,0 +1,23 @@
+<div class="fire-input-group" [ngClass]="{'has-addon-before': addonBefore, 'has-addon-after': addonAfter}">
+
+  <div class="fire-input-group-addon addon-before">
+    <div class="fire-input-group-content">
+
+      <ng-container *ngTemplateOutlet='liveAddonBeforeTemplate'></ng-container>
+      <div class="fire-addon-text" *ngIf="textBefore">{{fireAddonBefore}}</div>
+
+    </div>
+  </div>
+
+  <ng-content></ng-content>
+
+  <div class="fire-input-group-addon addon-after">
+    <div class="fire-input-group-content">
+
+      <ng-container *ngTemplateOutlet='liveAddonAfterTemplate'></ng-container>
+      <div class="fire-addon-text" *ngIf="textAfter">{{fireAddonAfter}}</div>
+
+    </div>
+  </div>
+
+</div>

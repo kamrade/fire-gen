@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import {IconsModule} from 'src/app/icons/icons.module';
 
 import { ContractsPageComponent } from './components/contracts-page/contracts-page.component';
 
@@ -17,8 +18,9 @@ const routes: Routes = [{
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule,
     FormsModule,
+    SharedModule,
+    IconsModule,
   ]
 })
 export class ContractsModule { }
