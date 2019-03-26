@@ -68,6 +68,24 @@
         </fire-input-group>
       </fire-form-group>
 
+      <hr />
+
+      <fire-form-group>
+        <fire-input-group>
+
+          <div style="flex-grow: 3;">
+            <div class="row">
+              <div class="col-2">
+                <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+              </div>
+              <div class="col-4">
+                <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
+              </div>
+            </div>
+          </div>
+
+        </fire-input-group>
+      </fire-form-group>
 
     </fire-board-body>
   </fire-board>

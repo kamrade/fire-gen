@@ -6,7 +6,6 @@ $addons-bg-color: $gray-300;
 :host {
   ::ng-deep .form-control {
     width: auto;
-    flex-grow: 2;
   }
 
   .fire-input-group-addon.addon-after {
@@ -15,6 +14,7 @@ $addons-bg-color: $gray-300;
       border-bottom-left-radius: 0;
     }
   }
+
   .fire-input-group-addon.addon-before {
     ::ng-deep .btn {
       border-top-right-radius: 0;
@@ -26,6 +26,7 @@ $addons-bg-color: $gray-300;
     ::ng-deep .form-control {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      flex-grow: 1;
     }
   }
 
@@ -33,6 +34,7 @@ $addons-bg-color: $gray-300;
     ::ng-deep .form-control {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      flex-grow: 1;
     }
   }
 }
