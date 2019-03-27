@@ -1,22 +1,46 @@
 @import 'src/assets/scss/bootstrap/variables';
 @import 'src/assets/scss/bootstrap/mixins';
 
-$addons-bg-color: $gray-300;
+$addons-bg-color: $gray-100;
 
 .fire-input-group {
   display: flex;
   align-items: stretch;
+  position: relative;
+
+  .fire-input-group-suffix {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .fire-input-group-prefix {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.text-addon-before, &.text-addon-after {
+    .fire-input-group-addon {
+      background-color: $addons-bg-color;
+      border: 1px solid $border-color;
+    }
+  }
 
   .fire-input-group-addon {
     display: flex;
-    background-color: $addons-bg-color;
+
 
     &.addon-before {
       border-radius: $border-radius 0 0 $border-radius;
+      margin-right: -1px;
     }
 
     &.addon-after {
       border-radius: 0 $border-radius $border-radius 0;
+      margin-left: -1px;
     }
 
     .fire-input-group-content {

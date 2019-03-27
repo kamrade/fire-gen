@@ -10,6 +10,23 @@
     margin-right: -1px;
   }
 
+  .fire-input-group-prefix {
+    ~input:first-of-type {
+      padding-left: 35px;
+    }
+  }
+
+  .fire-input-group-suffix {
+    ~input:last-of-type {
+      padding-right: 35px;
+    }
+  }
+
+  .fire-input-group-suffix +input, .fire-input-group-prefix +input {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
   input {
     border-radius: 0;
     margin-right: -1px;

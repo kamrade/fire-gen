@@ -17,12 +17,17 @@
         <div class="my-8">
 
           <fire-form-group>
-            <fire-input-group [fireAddonBefore]="addonBeforeTemplate">
+            <fire-input-group>
 
               <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
-              <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
-              <ng-template #addonBeforeTemplate>
-                <button class="btn btn-primary">Test</button>
+              <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+
+              <ng-template #suffixTemplate>
+                <fire-icon-inline iconName="edit_md20"></fire-icon-inline>
+              </ng-template>
+
+              <ng-template #prefixTemplate>
+                <fire-icon-inline iconName="reset_md20"></fire-icon-inline>
               </ng-template>
 
             </fire-input-group>
@@ -33,6 +38,20 @@
         <hr />
 
         <!-- OTHER -->
+
+
+        <fire-form-group>
+          <fire-input-group [fireAddonBefore]="addonBeforeTemplate">
+
+            <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+            <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
+            <ng-template #addonBeforeTemplate>
+              <button class="btn btn-primary mr-1">Test</button>
+            </ng-template>
+
+          </fire-input-group>
+        </fire-form-group>
+
 
         <fire-form-group>
           <fire-input-group fireAddonBefore="Test:" fireAddonAfter="USD">

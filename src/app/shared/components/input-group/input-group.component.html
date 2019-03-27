@@ -1,4 +1,18 @@
-<div class="fire-input-group" [ngClass]="{'has-addon-before': addonBefore, 'has-addon-after': addonAfter}">
+<div class="fire-input-group"
+  [ngClass]="{
+    'has-addon-before': addonBefore,
+    'has-addon-after': addonAfter,
+    'text-addon-before': textBefore,
+    'text-addon-after': textAfter
+  }">
+
+  <div *ngIf="suffixTemplate" class="fire-input-group-suffix">
+    <ng-container *ngTemplateOutlet='liveSuffixTemplate'></ng-container>
+  </div>
+  
+  <div *ngIf="prefixTemplate" class="fire-input-group-prefix">
+    <ng-container *ngTemplateOutlet='livePrefixTemplate'></ng-container>
+  </div>
 
   <div *ngIf="addonBefore" class="fire-input-group-addon addon-before">
     <div class="fire-input-group-content">
