@@ -18,6 +18,7 @@ import { TooltipDirective } from './components/tooltip/tooltip.directive';
 import { TextFieldDirective } from './components/text-field-base/text-field.directive';
 import { FormGroupComponent } from './components/form-group/form-group.component';
 import { InputGroupComponent } from './components/input-group/input-group.component';
+import { ButtonDirective } from './components/button/button.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
     TooltipDirective,
     TextFieldDirective,
     FormGroupComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    ButtonDirective
   ],
   imports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
     TextFieldDirective,
     FormGroupComponent,
     InputGroupComponent,
+    ButtonDirective
   ]
 })
 export class SharedModule { }

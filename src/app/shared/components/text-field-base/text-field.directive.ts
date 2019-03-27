@@ -8,7 +8,7 @@ export class TextFieldDirective implements OnInit {
   @Input() fireSize: string;
   @Input() fireGhost: boolean = false;
 
-  constructor(private _el: ElementRef,) {}
+  constructor(private _el: ElementRef) {}
 
   ngOnInit() {
     let classList = this.generateClassList();

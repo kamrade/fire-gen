@@ -16,23 +16,29 @@
 
         <div class="my-8">
 
-          <fire-form-group>
-            <fire-input-group>
-
-              <input fireTextField placeholder="TextField with suffix…" [(ngModel)]="value" />
-
-              <ng-template #suffixTemplate>
-                <fire-icon-inline iconName="edit_md20"></fire-icon-inline>
-              </ng-template>
-
-            </fire-input-group>
-          </fire-form-group>
+          <button fireButton [outline]="true" fireTheme="primary">Fire Button</button>{{''}}
+          <button fireButton fireTheme="secondary">Fire Button</button>{{''}}
+          <button fireButton fireTheme="success">Fire Button</button>{{''}}
+          <button fireButton fireTheme="dark">Fire Button</button>
 
         </div>
 
         <hr />
 
         <!-- OTHER -->
+
+        <fire-form-group>
+          <fire-input-group>
+
+            <input fireTextField placeholder="TextField with suffix…" [(ngModel)]="value" />
+
+            <ng-template #suffixTemplate>
+              <fire-icon-inline iconName="edit_md20"></fire-icon-inline>
+            </ng-template>
+
+          </fire-input-group>
+        </fire-form-group>
+
 
         <fire-form-group>
           <fire-input-group>
