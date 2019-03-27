@@ -1,92 +1,100 @@
 <div class="fire-contacts-page">
   <!-- <span appTooltip tooltipText="Board title tooltip">CONTRACTS PAGE</span> -->
 
-  <fire-board>
+  <div class="container">
+    <fire-board>
 
-    <fire-board-header>
-      <fire-board-title>
-        <span fireTooltip tooltipText="This is Contracts Page">Contracts</span>
-      </fire-board-title>
-    </fire-board-header>
+      <fire-board-header>
+        <fire-board-title>
+          <span fireTooltip tooltipText="This is Contracts Page">Contracts</span>
+        </fire-board-title>
+      </fire-board-header>
 
-    <fire-board-body>
+      <fire-board-body>
 
-      <fire-form-group>
-        <input fireTextField fireGhost="true" placeholder="Basic TextField…" [(ngModel)]="value" />
-      </fire-form-group>
+        <!-- WORK -->
 
-      <fire-form-group>
-        <input fireTextField fireGhost="true" fireSize="sm" placeholder="Basic TextField…" [(ngModel)]="value" />
-      </fire-form-group>
+        <div class="my-8">
 
-      <fire-form-group>
-        <input fireTextField fireGhost="true" fireSize="lg" placeholder="Basic TextField…" [(ngModel)]="value" />
-      </fire-form-group>
+          <fire-form-group>
+            <fire-input-group [fireAddonBefore]="addonBeforeTemplate">
 
-      <fire-form-group>
-        <input fireTextField fireSize="md" placeholder="Basic TextField…" [(ngModel)]="value" />
-      </fire-form-group>
+              <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+              <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
+              <ng-template #addonBeforeTemplate>
+                <button class="btn btn-primary">Test</button>
+              </ng-template>
 
-      <fire-form-group>
-        <input fireTextField fireSize="md" fireGhost="true" disabled placeholder="Basic TextField…" [(ngModel)]="value" />
-      </fire-form-group>
+            </fire-input-group>
+          </fire-form-group>
 
-      <fire-form-group>
-        <fire-input-group fireAddonBefore="https://" fireAddonAfter=".com">
-          <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
-        </fire-input-group>
-      </fire-form-group>
+        </div>
 
-      <fire-form-group>
-        <fire-input-group fireAddonBefore="https://">
-          <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
-        </fire-input-group>
-      </fire-form-group>
+        <hr />
 
-      <fire-form-group>
-        <fire-input-group fireAddonAfter="USD">
-          <input fireGhost="true" fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
-        </fire-input-group>
-      </fire-form-group>
+        <!-- OTHER -->
 
-      <fire-form-group>
-        <fire-input-group [fireAddonBefore]="addonBeforeTemplate" [fireAddonAfter]="addonAfterTemplate">
-          <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
-          <ng-template #addonBeforeTemplate>
-            <button class="btn btn-primary">
-              <fire-icon-inline iconName='ok_md20_white'></fire-icon-inline>
-              Test
-            </button>
-          </ng-template>
-          <ng-template #addonAfterTemplate>
-            <div class="py-1 px-2">
-              Addon after template
-              <fire-icon-inline iconName='edit_md20'></fire-icon-inline>
-            </div>
+        <fire-form-group>
+          <fire-input-group fireAddonBefore="Test:" fireAddonAfter="USD">
 
-          </ng-template>
-        </fire-input-group>
-      </fire-form-group>
+            <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+            <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
+            <!-- <input fireTextField placeholder="TextField 3 in group…" [(ngModel)]="value" /> -->
 
-      <hr />
+          </fire-input-group>
+        </fire-form-group>
 
-      <fire-form-group>
-        <fire-input-group>
+        <fire-form-group>
+          <fire-input-group>
 
-          <div style="flex-grow: 3;">
-            <div class="row">
-              <div class="col-2">
-                <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
-              </div>
-              <div class="col-4">
-                <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
-              </div>
-            </div>
-          </div>
+            <input fireTextField placeholder="TextField 1 in group…" [(ngModel)]="value" />
+            <input fireTextField placeholder="TextField 2 in group…" [(ngModel)]="value" />
+            <button class="btn btn-primary">Test</button>
 
-        </fire-input-group>
-      </fire-form-group>
+          </fire-input-group>
+        </fire-form-group>
 
-    </fire-board-body>
-  </fire-board>
+
+        <fire-form-group>
+          <input fireTextField placeholder="Basic TextField…" [(ngModel)]="value" />
+        </fire-form-group>
+
+        <fire-form-group>
+          <input fireTextField fireSize="sm" placeholder="Basic TextField…" [(ngModel)]="value" />
+        </fire-form-group>
+
+        <fire-form-group>
+          <input fireTextField fireSize="lg" placeholder="Basic TextField…" [(ngModel)]="value" />
+        </fire-form-group>
+
+        <fire-form-group>
+          <input fireTextField fireSize="md" placeholder="Basic TextField…" [(ngModel)]="value" />
+        </fire-form-group>
+
+        <fire-form-group>
+          <input fireTextField fireSize="md" disabled placeholder="Basic TextField…" [(ngModel)]="value" />
+        </fire-form-group>
+
+        <fire-form-group>
+          <fire-input-group fireAddonBefore="https://" fireAddonAfter=".com">
+            <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
+          </fire-input-group>
+        </fire-form-group>
+
+        <fire-form-group>
+          <fire-input-group fireAddonBefore="https://">
+            <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
+          </fire-input-group>
+        </fire-form-group>
+
+        <fire-form-group>
+          <fire-input-group fireAddonAfter="USD">
+            <input fireTextField placeholder="TextField with addons…" [(ngModel)]="value" />
+          </fire-input-group>
+        </fire-form-group>
+
+      </fire-board-body>
+    </fire-board>
+  </div> <!-- CONTAINER -->
+
 </div>
