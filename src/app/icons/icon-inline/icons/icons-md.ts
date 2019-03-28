@@ -44,3 +44,15 @@ export const reset_md20 = `
 <path d="M17 12.1426C16.6357 10.9137 16.0165 9.81498 15.2003 8.94899C14.384 8.083 13.3973 7.47793 12.3322 7.19026C11.267 6.90258 10.1582 6.94167 9.10915 7.30388C8.06009 7.66609 7.10499 8.33961 6.33298 9.26159L2.99999 13" stroke="#495C6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 `;
+
+export const chevron_left_md20 = `
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 13L8 10L11 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+
+export const chevron_right_md20 = `
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 13L11.5 10L8.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;

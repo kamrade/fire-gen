@@ -1,7 +1,6 @@
 @mixin ghost-button() {
   transition: background .2s ease-in-out;
   cursor: pointer;
-
   &:hover {
     background-color: $gray-100;
   }
@@ -17,6 +16,17 @@
 }
 
 .btn[disabled] {
+  //
+  // TODO:
+  // Как вариант использовать для всех disabled кнопок один вид
+  // Пока, думаю, лучше использовать просто opacity: 40%
+  //
+
+  // color: rgba($gray-900, .4);
+  // background-color: $gray-100;
+  // border-color: $gray-200;
+  // text-shadow: none;
+  // box-shadow: none;
   opacity: .4;
 }
 
@@ -26,7 +36,6 @@
     background-color: $gray-100;
   }
 }
-
 
 .btn-xl {
   @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);

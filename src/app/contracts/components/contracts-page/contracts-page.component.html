@@ -12,26 +12,63 @@
 
       <fire-board-body>
 
-        <h2 class="board-body-header">Button</h2>
+        <h2
+          #scroll
+          [attr.data-item-ratio]="itemsRatio"
+          class="board-body-header">
+          Button</h2>
 
-        <!-- WORK -->
+        <!-- Button group -->
 
         <div class="my-5">
 
           <div class="py-3">
-            <button fireButton fireShape="rounded" fireTheme="primary">Rounded Button</button>{{''}}
+            <fire-button-group>
+              <button fireButton fireTheme="primary">
+                <fire-icon-inline iconName='chevron_left_md20'></fire-icon-inline>
+                Left</button>
+              <button fireButton fireTheme="primary">Middle</button>
+              <button fireButton fireTheme="primary">
+                Right
+                <fire-icon-inline iconName='chevron_right_md20'></fire-icon-inline>
+              </button>
+            </fire-button-group>
+          </div>
 
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="my-5">
+
+
+
+          <div class="py-3">
+            <button fireButton fireShape="rounded" fireTheme="primary">Rounded Button</button>{{''}}
             <button fireButton [outline]="true" fireTheme="primary">
               Fire Button</button>{{''}}
             <button fireButton fireTheme="secondary">
-              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>Fire Button</button>{{''}}
+              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
+              Fire Button with icon
+            </button>{{''}}
+          </div>
+
+
+
+          <div class="py-3">
             <button disabled fireButton fireTheme="secondary">
-              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>Fire Button</button>{{''}}
+              <span class="btn-icon">
+                <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
+              </span>
+              Fire Button
+            </button>{{''}}
             <button disabled fireButton fireTheme="dashed">Fire Button</button>{{''}}
             <button fireButton fireTheme="dashed">Fire Button</button>{{''}}
             <button disabled fireButton fireTheme="success">Fire Button</button>{{''}}
             <button fireButton fireTheme="dark">Fire Button</button>
           </div>
+
+
 
           <div class="py-3">
             <button fireButton fireSize="sm" fireTheme="success">
@@ -40,26 +77,33 @@
             <button fireButton fireShape="rounded" fireSize="sm" fireTheme="secondary">Fire Button</button>{{''}}
           </div>
 
+
+
           <div class="py-3">
             <button fireButton fireSize="lg" fireTheme="secondary">Fire Button</button>{{''}}
             <button fireButton fireSize="lg" fireTheme="dashed">Fire Button</button>{{''}}
-            <button fireButton fireSize="lg" fireShape="circled" fireTheme="dashed">
+            <button fireButton fireSize="lg" fireShape="circled" fireTheme="secondary">
               <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
             </button>{{''}}
           </div>
 
           <div class="py-3">
             <button fireButton fireSize="xl" fireTheme="secondary">
-              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
-              Fire Button</button>{{''}}
+              <span class="btn-icon">
+                <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
+              </span>
+              Fire Button
+            </button>{{''}}
             <button fireButton fireSize="xl" fireTheme="dashed">Fire Button</button>{{''}}
           </div>
+
+
 
         </div>
 
         <hr class="my-5" />
 
-        <!-- OTHER -->
+        <!-- Text Fields -->
 
         <h2 class="board-body-header">Text Field</h2>
         <div class="my-5">

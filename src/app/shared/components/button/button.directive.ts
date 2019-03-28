@@ -1,5 +1,7 @@
 import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 
+type FireSize = "sm" | "lg" | "xl" | "";
+
 @Directive({
   selector: '[fireButton]'
 })
@@ -7,7 +9,7 @@ export class ButtonDirective implements OnInit {
 
   @Input() fireTheme: string;
   @Input() outline = false;
-  @Input() fireSize: string;
+  @Input() fireSize: FireSize = "";
   @Input() fireShape: string;
 
   constructor(private _el: ElementRef) { }
@@ -15,18 +17,20 @@ export class ButtonDirective implements OnInit {
   ngOnInit() {
     const buttonClassList = ['btn'];
 
-    switch(this.fireSize) {
-      case 'sm':
-        buttonClassList.push('btn-sm');
-        break;
-      case 'lg':
-        buttonClassList.push('btn-lg');
-        break;
-      case 'xl':
-        buttonClassList.push('btn-xl');
-        break;
-      default:
-        break;
+    if (this.fireSize) {
+      switch(this.fireSize) {
+        case 'sm':
+          buttonClassList.push('btn-sm');
+          break;
+        case 'lg':
+          buttonClassList.push('btn-lg');
+          break;
+        case 'xl':
+          buttonClassList.push('btn-xl');
+          break;
+        default:
+          throw('Wrong size');
+      }
     }
 
     if (this.fireTheme) {
@@ -36,6 +40,9 @@ export class ButtonDirective implements OnInit {
     switch (this.fireShape) {
       case 'circled':
         buttonClassList.push('btn-circled');
+        break;
+      case 'squared':
+        buttonClassList.push('btn-squared');
         break;
       case 'rounded':
         buttonClassList.push('btn-rounded');
@@ -67,6 +74,9 @@ export class ButtonDirective implements OnInit {
         break;
       case 'success':
         className += 'success';
+        break;
+      case 'danger':
+        className += 'danger';
         break;
       case 'dashed':
         className += 'dashed';
