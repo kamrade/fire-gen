@@ -11,6 +11,7 @@ export class ButtonDirective implements OnInit {
   @Input() outline = false;
   @Input() fireSize: FireSize = "";
   @Input() fireShape: string;
+  @Input() fireBlock = false;
 
   constructor(private _el: ElementRef) { }
 
@@ -35,6 +36,10 @@ export class ButtonDirective implements OnInit {
 
     if (this.fireTheme) {
       buttonClassList.push( this.setTheme() );
+    }
+
+    if (this.fireBlock) {
+      buttonClassList.push('btn-block');
     }
 
     switch (this.fireShape) {
@@ -80,6 +85,9 @@ export class ButtonDirective implements OnInit {
         break;
       case 'dashed':
         className += 'dashed';
+        break;
+      case 'warning':
+        className += 'warning';
         break;
       default:
         break;

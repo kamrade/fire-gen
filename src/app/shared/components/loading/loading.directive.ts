@@ -19,6 +19,7 @@ import { LoaderInlineComponent } from 'src/app/shared/components/loader-inline/l
 export class LoadingDirective implements AfterViewInit, OnDestroy, OnChanges {
 
   @Input() fireLoading: boolean;
+  displayProperty: string;
 
   @ContentChildren(IconInlineComponent, {read: ElementRef, descendants: true}) iconsInside: QueryList<ElementRef>;
   contentCmpRef: any;
@@ -47,12 +48,14 @@ export class LoadingDirective implements AfterViewInit, OnDestroy, OnChanges {
       this.iconsInside.forEach((item) => {
         item.nativeElement.style.display = 'none';
       });
+
       setTimeout(() => {
         let componentFactory: any;
         componentFactory = this._componentFactoryResolver.resolveComponentFactory(LoaderInlineComponent);
         this.contentCmpRef = this._viewContainerRef.createComponent(componentFactory);
         this.contentCmpRef.instance.iconName = 'loading_md20';
-        this._el.nativeElement.appendChild(this.contentCmpRef.location.nativeElement);
+        const firstChild = this._el.nativeElement.childNodes[0];
+        this._el.nativeElement.insertBefore(this.contentCmpRef.location.nativeElement, firstChild);
         this._el.nativeElement.disabled = true;
       });
 
