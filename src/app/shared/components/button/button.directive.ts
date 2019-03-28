@@ -8,6 +8,7 @@ export class ButtonDirective implements OnInit {
   @Input() fireTheme: string;
   @Input() outline = false;
   @Input() fireSize: string;
+  @Input() fireShape: string;
 
   constructor(private _el: ElementRef) { }
 
@@ -30,6 +31,17 @@ export class ButtonDirective implements OnInit {
 
     if (this.fireTheme) {
       buttonClassList.push( this.setTheme() );
+    }
+
+    switch (this.fireShape) {
+      case 'circled':
+        buttonClassList.push('btn-circled');
+        break;
+      case 'rounded':
+        buttonClassList.push('btn-rounded');
+        break;
+      default:
+        break;
     }
 
     this._el.nativeElement.classList.add(...buttonClassList);

@@ -19,14 +19,17 @@
         <div class="my-5">
 
           <div class="py-3">
-            <button fireButton [outline]="true" fireTheme="primary">
+            <button fireButton fireShape="rounded" fireTheme="primary">Rounded Button</button>{{''}}
 
+            <button fireButton [outline]="true" fireTheme="primary">
               Fire Button</button>{{''}}
             <button fireButton fireTheme="secondary">
-              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
-              Fire Button</button>{{''}}
+              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>Fire Button</button>{{''}}
+            <button disabled fireButton fireTheme="secondary">
+              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>Fire Button</button>{{''}}
+            <button disabled fireButton fireTheme="dashed">Fire Button</button>{{''}}
             <button fireButton fireTheme="dashed">Fire Button</button>{{''}}
-            <button fireButton fireTheme="success">Fire Button</button>{{''}}
+            <button disabled fireButton fireTheme="success">Fire Button</button>{{''}}
             <button fireButton fireTheme="dark">Fire Button</button>
           </div>
 
@@ -34,11 +37,15 @@
             <button fireButton fireSize="sm" fireTheme="success">
               Fire Button</button>{{''}}
             <button fireButton fireSize="sm" fireTheme="secondary">Fire Button</button>{{''}}
+            <button fireButton fireShape="rounded" fireSize="sm" fireTheme="secondary">Fire Button</button>{{''}}
           </div>
 
           <div class="py-3">
             <button fireButton fireSize="lg" fireTheme="secondary">Fire Button</button>{{''}}
             <button fireButton fireSize="lg" fireTheme="dashed">Fire Button</button>{{''}}
+            <button fireButton fireSize="lg" fireShape="circled" fireTheme="dashed">
+              <fire-icon-inline iconName='mail_md20'></fire-icon-inline>
+            </button>{{''}}
           </div>
 
           <div class="py-3">

@@ -1,0 +1,37 @@
+.btn-circled {
+  border-radius: 15px;
+  padding: $input-btn-padding-y;
+
+  &.btn-sm {
+    border-radius: 12px;
+    padding: $input-btn-padding-y-sm;
+  }
+
+  &.btn-lg {
+    border-radius: 20px;
+    padding: $input-btn-padding-y-lg;
+  }
+
+  &.btn-xl {
+    border-radius: 25px;
+    padding: $input-btn-padding-y-xl;
+  }
+
+}
+
+.btn-rounded {
+  border-radius: 15px;
+
+  &.btn-sm {
+    border-radius: 12px;
+  }
+
+  &.btn-lg {
+    border-radius: 20px;
+  }
+
+  &.btn-xl {
+    border-radius: 25px;
+  }
+
+}

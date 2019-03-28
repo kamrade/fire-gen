@@ -22,7 +22,7 @@
 
 .btn.btn-dashed {
   border: 1px dashed $gray-300;
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: $gray-100;
   }
 }
