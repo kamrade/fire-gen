@@ -20,6 +20,9 @@ import { FormGroupComponent } from './components/form-group/form-group.component
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { ButtonDirective } from './components/button/button.directive';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
+import { LoadingDirective } from './components/loading/loading.directive';
+import { IconInlineComponent } from 'src/app/icons/icon-inline/icon-inline.component';
+import { LoaderInlineComponent } from './components/loader-inline/loader-inline.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { ButtonGroupComponent } from './components/button-group/button-group.com
     FormGroupComponent,
     InputGroupComponent,
     ButtonDirective,
-    ButtonGroupComponent
+    ButtonGroupComponent,
+    LoadingDirective,
+    LoaderInlineComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +51,8 @@ import { ButtonGroupComponent } from './components/button-group/button-group.com
     IconsModule,
   ],
   entryComponents: [
-    TooltipComponent
+    TooltipComponent,
+    LoaderInlineComponent
   ],
   exports: [
     HeaderComponent,
@@ -63,7 +69,9 @@ import { ButtonGroupComponent } from './components/button-group/button-group.com
     FormGroupComponent,
     InputGroupComponent,
     ButtonDirective,
-    ButtonGroupComponent
+    ButtonGroupComponent,
+    LoadingDirective,
+    LoaderInlineComponent
   ]
 })
 export class SharedModule { }

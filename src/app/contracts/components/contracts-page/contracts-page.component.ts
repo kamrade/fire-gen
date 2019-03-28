@@ -7,6 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class ContractsPageComponent implements OnInit {
 
+  demoLoading = false;
+
   value: '';
   @ViewChild('scroll') scrollElementRef: ElementRef;
 
@@ -18,6 +20,13 @@ export class ContractsPageComponent implements OnInit {
   get itemsRatio(): number {
     const $scroll = this.scrollElementRef.nativeElement;
     return $scroll.offsetWidth;
+  }
+
+  setLoading() {
+    this.demoLoading = true;
+    setTimeout(() => {
+      this.demoLoading = false;
+    }, 1000);
   }
 
 }

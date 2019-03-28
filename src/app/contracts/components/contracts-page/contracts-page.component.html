@@ -18,6 +18,24 @@
           class="board-body-header">
           Button</h2>
 
+        <!-- Button loading -->
+
+        <div class="my-5">
+          <div class="py-3">
+
+            <button (click)="setLoading()"
+              fireButton fireShape="rounded" fireTheme="secondary"
+              [fireLoading]="demoLoading">
+
+              <fire-icon-inline iconName='bell_md20'></fire-icon-inline>{{''}}
+              <span>Rounded Button</span>{{''}}
+              <fire-icon-inline iconName='bell_md20'></fire-icon-inline>{{''}}
+            </button>{{''}}
+
+          </div>
+        </div>
+
+
         <!-- Button group -->
 
         <div class="my-5">
