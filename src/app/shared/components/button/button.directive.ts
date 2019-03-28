@@ -21,6 +21,9 @@ export class ButtonDirective implements OnInit {
       case 'lg':
         buttonClassList.push('btn-lg');
         break;
+      case 'xl':
+        buttonClassList.push('btn-xl');
+        break;
       default:
         break;
     }
@@ -52,6 +55,9 @@ export class ButtonDirective implements OnInit {
         break;
       case 'success':
         className += 'success';
+        break;
+      case 'dashed':
+        className += 'dashed';
         break;
       default:
         break;

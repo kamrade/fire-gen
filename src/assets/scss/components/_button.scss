@@ -19,3 +19,15 @@
 .btn[disabled] {
   opacity: .4;
 }
+
+.btn.btn-dashed {
+  border: 1px dashed $gray-300;
+  &:hover {
+    background-color: $gray-100;
+  }
+}
+
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}

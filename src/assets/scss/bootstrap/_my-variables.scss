@@ -41,20 +41,31 @@ $spacers: map-merge(
 
 $body-bg: $gray-100;
 
+$border-radius:    .25rem;
+$border-radius-lg: .375rem;
+$border-radius-sm: .25rem;
+
 $grid-gutter-width: $spacer/2;
 
 $font-size-base: 0.875rem;
-$font-size-lg:   1.125rem;
+$font-size-lg:   0.875rem;
 // $font-size-lg:   1.3125rem;
 $font-size-sm:   0.75rem;
 
+$font-weight-bold: 600;
+$headings-font-weight: 600;
 
 // CONTROLS, BUTTONS, FORMS
 
-$input-btn-padding-y: 0.5625rem;
+$input-btn-padding-y: 0.25rem;
 $input-btn-padding-x: 0.75rem;
 $input-btn-focus-width: 0.125rem;
 $input-btn-padding-y-sm: 0.1875rem;
 $input-btn-padding-y-lg: 0.5625rem;
+
+$input-btn-padding-y-xl: .875rem;
+$input-btn-padding-x-xl: 1.25rem;
+$btn-padding-x-xl: $input-btn-padding-x-xl;
+$btn-padding-y-xl: $input-btn-padding-y-xl;
 
 $form-group-margin-bottom: $spacer;
