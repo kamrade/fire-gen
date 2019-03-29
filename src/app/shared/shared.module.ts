@@ -23,6 +23,7 @@ import { ButtonGroupComponent } from './components/button-group/button-group.com
 import { LoadingDirective } from './components/loading/loading.directive';
 import { IconInlineComponent } from 'src/app/icons/icon-inline/icon-inline.component';
 import { LoaderInlineComponent } from './components/loader-inline/loader-inline.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LoaderInlineComponent } from './components/loader-inline/loader-inline.
     ButtonDirective,
     ButtonGroupComponent,
     LoadingDirective,
-    LoaderInlineComponent
+    LoaderInlineComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -71,7 +73,8 @@ import { LoaderInlineComponent } from './components/loader-inline/loader-inline.
     ButtonDirective,
     ButtonGroupComponent,
     LoadingDirective,
-    LoaderInlineComponent
+    LoaderInlineComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }

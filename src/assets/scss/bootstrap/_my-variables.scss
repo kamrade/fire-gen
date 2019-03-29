@@ -21,22 +21,23 @@ $secondary: $gray-200;
 $line-height-lg: 1.4286;
 $line-height-sm: 1.4286;
 $line-height-base: 1.4286;
+$headings-line-height: 1.25;
 
-$spacer: 1.25rem;
+$spacer: 1.25rem; //20
 
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 2),
-    6: ($spacer * 3),
-    7: ($spacer * 4),
-    8: ($spacer * 5)
+    1: ($spacer * .25), // 5
+    2: ($spacer * .5),  // 10
+    3: $spacer,         // 20
+    4: ($spacer * 1.5), // 30
+    5: ($spacer * 2),   // 40
+    6: ($spacer * 3),   // 60
+    7: ($spacer * 4),   // 80
+    8: ($spacer * 5)    // 100
   ),
   $spacers
 );
@@ -74,3 +75,10 @@ $btn-padding-x-xl: $input-btn-padding-x-xl;
 $btn-padding-y-xl: $input-btn-padding-y-xl;
 
 $form-group-margin-bottom: $spacer;
+
+$h1-font-size: 32px;            // line-height: 40
+$h2-font-size: 28px;            // line-height: 35
+$h3-font-size: 24px;            // line-height: 30
+$h4-font-size: 20px;            // line-height: 25
+$h5-font-size: 16px;            // line-height: 20
+$h6-font-size: $font-size-base; // line-height: 17

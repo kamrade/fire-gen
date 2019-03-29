@@ -1,0 +1,22 @@
+.fire-table {
+
+  .table {
+    thead th {
+      border-bottom: 1px solid $border-color;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+    }
+
+    th, td {
+      border-top: 1px dotted $border-color;
+      padding: 0.625rem;
+    }
+
+    tr:last-child() {
+      td {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+}

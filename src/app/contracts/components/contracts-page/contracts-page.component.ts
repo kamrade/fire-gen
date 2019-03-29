@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { listOfData } from './list-of-data';
 
 @Component({
   selector: 'fire-contracts-page',
@@ -8,6 +9,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ContractsPageComponent implements OnInit {
 
   demoLoading = false;
+  listOfData = listOfData;
 
   value: '';
   @ViewChild('scroll') scrollElementRef: ElementRef;

@@ -12,14 +12,56 @@
 
       <fire-board-body>
 
+
+        <!-- Table -->
+
+
+        <div class="my-5">
+          <h1 class="board-body-header">Table</h1>
+          <h2 class="board-body-header">Table</h2>
+          <h3 class="board-body-header">Table</h3>
+          <h4 class="board-body-header">Table</h4>
+          <h5 class="board-body-header">Table</h5>
+          <h6 class="board-body-header">Table</h6>
+
+          <div class="py-3">
+
+            <fire-table #basicTable [fireData]="listOfData">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of basicTable.fireData">
+                  <td>{{data.name}}</td>
+                  <td>{{data.age}}</td>
+                  <td>{{data.address}}</td>
+                  <td>
+                    <a>Action - {{data.name}}</a>
+                    |
+                    <a>Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </fire-table>
+
+          </div>
+        </div>
+
+
+
+
+        <!-- Button block -->
         <h2
           #scroll
           [attr.data-item-ratio]="itemsRatio"
           class="board-body-header">
           Button</h2>
 
-
-        <!-- Button block -->
         <div class="my-5">
           <div class="py-3">
             <button fireButton [fireBlock]="true" fireTheme="primary">
@@ -28,12 +70,11 @@
             </button>{{''}}
             <button fireButton [fireBlock]="true" fireTheme="secondary">Block button</button>{{''}}
           </div>
-        </div>
 
 
-        <!-- Button loading -->
 
-        <div class="my-5">
+          <!-- Button loading -->
+
           <div class="py-3">
 
             <button (click)="setLoading()"
@@ -46,12 +87,8 @@
             </button>{{''}}
 
           </div>
-        </div>
 
-
-        <!-- Button group -->
-
-        <div class="my-5">
+          <!-- Button group -->
 
           <div class="py-3">
             <fire-button-group>
