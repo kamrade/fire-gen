@@ -1,6 +1,9 @@
 <div class="fire-table fire-table-default">
   <div class="fire-table-content">
-    <table class="table">
+    <table
+      class="table"
+      [ngClass]="{'table-striped': striped}"
+    >
 
       <ng-content></ng-content>
 

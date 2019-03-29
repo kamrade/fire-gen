@@ -8,11 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TableComponent implements OnInit {
 
   @Input() fireData: any;
+  @Input() striped = false;
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.fireData);
-  }
+  ngOnInit() {}
 
 }

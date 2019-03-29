@@ -6,6 +6,10 @@
   }
 }
 
+.btn {
+  vertical-align: top;
+}
+
 .btn-cap {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -28,4 +32,8 @@
 
 .btn-xl {
   @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  padding-top: 1px;
 }

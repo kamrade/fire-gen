@@ -12,27 +12,49 @@
 
       <fire-board-body>
 
-
         <!-- Table -->
 
-
         <div class="my-5">
-          <h1 class="board-body-header">Table</h1>
-          <h2 class="board-body-header">Table</h2>
-          <h3 class="board-body-header">Table</h3>
-          <h4 class="board-body-header">Table</h4>
-          <h5 class="board-body-header">Table</h5>
-          <h6 class="board-body-header">Table</h6>
+
+          <h4 class="board-body-header">Simple Table</h4>
+
+          <div style="margin: 0 -30px;" class="py-3">
+
+            <fire-table #stripedTable [fireData]="listOfData" [striped]="true">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Address</th>
+                  <th><p class="text-right mb-0">Action</p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of stripedTable.fireData">
+                  <td>{{data.name}}</td>
+                  <td>{{data.age}}</td>
+                  <td>{{data.address}}</td>
+                  <td>
+
+                    <p class="text-right mb-0">
+                      <a>Action - {{data.name}}</a>{{''}}
+                      <button fireButton fireTheme="danger" [outline]="true" fireSize="sm">Delete</button>
+                    </p>
+
+                  </td>
+                </tr>
+              </tbody>
+            </fire-table>
+          </div>
 
           <div class="py-3">
-
             <fire-table #basicTable [fireData]="listOfData">
               <thead>
                 <tr>
                   <th>Name</th>
                   <th>Age</th>
                   <th>Address</th>
-                  <th>Action</th>
+                  <th><p class="text-right mb-0">Action</p></th>
                 </tr>
               </thead>
               <tbody>
@@ -41,15 +63,19 @@
                   <td>{{data.age}}</td>
                   <td>{{data.address}}</td>
                   <td>
-                    <a>Action - {{data.name}}</a>
-                    |
-                    <a>Delete</a>
+
+                    <p class="text-right mb-0">
+                      <a>Action - {{data.name}}</a>{{''}}
+                      <button fireButton fireTheme="danger" [outline]="true" fireSize="sm">Delete</button>
+                    </p>
+
                   </td>
                 </tr>
               </tbody>
             </fire-table>
-
           </div>
+
+
         </div>
 
 
