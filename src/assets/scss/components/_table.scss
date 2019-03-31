@@ -1,3 +1,67 @@
+// TODO: Create mixin for differret kind
+// of negative margin wrapper for tables.
+
+.fire-table-wrapper {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    // Для каждого из списка $grid-breakpoints
+    @include media-breakpoint-up($breakpoint) {
+      // Если $breakpoint = xs (0) тогда не оборачиваем в mediaquery.
+      // Если, к примеру $breakpoint = md, то возвращает media(mix-width: 768px)
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      // $infix = если не xs, то sm, md, lg, xl, etc.
+
+      @each $size, $length in $spacers {
+        @if $size != 0 {
+
+          .fire-table-p#{$infix}-#{$size} {
+            .fire-table .table {
+              thead th, tbody td {
+                &:first-child() {
+                  padding-left: $length;
+                }
+                &:last-child() {
+                  padding-right: $length;
+                }
+              }
+            }
+          }
+
+          .fire-table-m#{$infix}-n#{$size} {
+            margin-left: -$length;
+            margin-right: -$length;
+          }
+
+        }
+      }
+
+    }
+  }
+}
+
+// .fire-table-wrapper {
+//   &.nm-3 {
+//     margin: 0 -30px;
+//     .fire-table .table {
+//       thead th {
+//         &:first-child() {
+//           padding-left: 30px;
+//         }
+//         &:last-child() {
+//           padding-right: 30px;
+//         }
+//       }
+//       tbody td {
+//         &:first-child() {
+//           padding-left: 30px;
+//         }
+//         &:last-child() {
+//           padding-right: 30px;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .fire-table {
 
   .table {
@@ -7,6 +71,7 @@
       letter-spacing: 0.75px;
       font-size: 12px;
       line-height: 17px;
+
     }
 
     tbody td {
