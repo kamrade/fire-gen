@@ -42,6 +42,14 @@ $spacers: map-merge(
   $spacers
 );
 
+$container-max-widths: (
+  sm: 768px,
+  md: 960px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
 $body-bg: $gray-100;
 
 $border-color: $gray-300;
