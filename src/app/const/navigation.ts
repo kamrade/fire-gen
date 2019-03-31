@@ -21,6 +21,13 @@ export const navigation: TabItem[] = [
   value: 'customers',
   id: '3',
   link: '/customers'
-}
+},
+
+{
+  title: 'Clients',
+  value: 'clients',
+  id: '4',
+  link: '/clients'
+},
 
 ];

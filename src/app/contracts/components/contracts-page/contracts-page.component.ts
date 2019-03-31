@@ -31,4 +31,6 @@ export class ContractsPageComponent implements OnInit {
     }, 1000);
   }
 
+
+
 }

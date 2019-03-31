@@ -1,3 +1,4 @@
+/*
 import { TooltipDirective } from './tooltip.directive';
 
 describe('TooltipDirective', () => {
@@ -6,3 +7,4 @@ describe('TooltipDirective', () => {
     expect(directive).toBeTruthy();
   });
 });
+*/
