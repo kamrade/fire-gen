@@ -72,7 +72,7 @@ $headings-font-weight: 600;
 // CONTROLS, BUTTONS, FORMS
 
 $input-btn-padding-y: 0.25rem;
-$input-btn-padding-x: 0.75rem;
+$input-btn-padding-x: 0.5rem;
 $input-btn-focus-width: 0.125rem;
 $input-btn-padding-y-sm: 0;
 // $input-btn-padding-y-sm: 0.1875rem;
@@ -84,6 +84,7 @@ $btn-padding-x-xl: $input-btn-padding-x-xl;
 $btn-padding-y-xl: $input-btn-padding-y-xl;
 
 $form-group-margin-bottom: $spacer;
+$label-margin-bottom: $spacer/4;
 
 $h1-font-size: 32px;            // line-height: 40
 $h2-font-size: 28px;            // line-height: 35
@@ -93,3 +94,7 @@ $h5-font-size: 16px;            // line-height: 20
 $h6-font-size: $font-size-base; // line-height: 17
 
 $table-accent-bg: $gray-100;
+
+$alert-padding-y:     .5625rem;
+$alert-padding-x:     .625rem;
+$alert-margin-bottom: $spacer;

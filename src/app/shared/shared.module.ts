@@ -24,6 +24,9 @@ import { LoadingDirective } from './components/loading/loading.directive';
 import { IconInlineComponent } from 'src/app/icons/icon-inline/icon-inline.component';
 import { LoaderInlineComponent } from './components/loader-inline/loader-inline.component';
 import { TableComponent } from './components/table/table.component';
+import { FormControlComponent } from './components/form-control/form-control.component';
+import { FormLabelComponent } from './components/form-label/form-label.component';
+import { FormFeedbackComponent } from './components/form-feedback/form-feedback.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { TableComponent } from './components/table/table.component';
     ButtonGroupComponent,
     LoadingDirective,
     LoaderInlineComponent,
-    TableComponent
+    TableComponent,
+    FormControlComponent,
+    FormLabelComponent,
+    FormFeedbackComponent,
   ],
   imports: [
     CommonModule,
@@ -74,7 +80,10 @@ import { TableComponent } from './components/table/table.component';
     ButtonGroupComponent,
     LoadingDirective,
     LoaderInlineComponent,
-    TableComponent
+    TableComponent,
+    FormControlComponent,
+    FormLabelComponent,
+    FormFeedbackComponent,
   ]
 })
 export class SharedModule { }

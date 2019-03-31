@@ -1,5 +1,38 @@
-<div class="fire-client-form">
+<div class="fire-client-form mb-5">
   <div class="form-title">
-    <h5>Client form</h5>
+
+    <h5 class="mb-3">Client form</h5>
+
+    <form [formGroup]="myFirstReactiveForm" (submit)="onSubmit()">
+
+      <div class="alert alert-dark">
+        {{myFirstReactiveForm.value | json}}
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <fire-form-group>
+            <label for="name">Name:</label>
+            <input fireTextField fireSize="lg" placeholder="Enter your name…" type="text" id="name" formControlName="name" >
+          </fire-form-group>
+        </div>
+
+        <div class="col-md-6">
+          <fire-form-group>
+            <label for="email">Email:</label>
+            <input fireTextField fireSize="lg" placeholder="Enter your email…" type="text" id="email" formControlName="email" >
+            <fire-form-feedback *ngIf="isControlInvalid('email')">
+              <span class="text-danger">Invalid email</span>
+            </fire-form-feedback>
+          </fire-form-group>
+        </div>
+
+      </div>
+
+      <button fireButton fireTheme='primary' fireSize='lg' type="submit">Submit</button>
+
+    </form>
+
   </div>
 </div>
