@@ -5,6 +5,7 @@ import {IconsModule} from 'src/app/icons/icons.module';
 
 import { ClientsPageComponent } from './clients-page.component';
 import { ClientListComponent } from 'src/app/clients/components/client-list/client-list.component';
+import { ClientFormComponent } from 'src/app/clients/components/client-form/client-form.component';
 
 describe('ClientsPageComponent', () => {
   let component: ClientsPageComponent;
@@ -13,7 +14,7 @@ describe('ClientsPageComponent', () => {
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
-      declarations: [ ClientsPageComponent, ClientListComponent ],
+      declarations: [ ClientsPageComponent, ClientListComponent, ClientFormComponent ],
       imports: [SharedModule, IconsModule]
     })
     .compileComponents();
