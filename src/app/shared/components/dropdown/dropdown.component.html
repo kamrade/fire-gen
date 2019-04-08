@@ -1,0 +1,11 @@
+<div
+        [ngStyle]="{'top.px': options.y + options.height + 4, 'left.px': options.x, 'maxWidth.px': options.width}"
+        class="cpa-dropdown">
+
+  <ul class="cpa-dropdown-items">
+    <li (click)="choose(item)" *ngFor="let item of options.content" class="cpa-dropdown-item">
+      <span>{{item.title}}</span>
+    </li>
+  </ul>
+
+</div>

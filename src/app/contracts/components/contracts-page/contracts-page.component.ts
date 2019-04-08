@@ -11,6 +11,17 @@ export class ContractsPageComponent implements OnInit {
   demoLoading = false;
   listOfData = listOfData;
 
+  colorThemes = [{
+    title: 'normal',
+    value: 'normal'
+  }, {
+    title: 'small',
+    value: 'small'
+  }, {
+    title: 'large',
+    value: 'large'
+  }];
+
   value: '';
   @ViewChild('scroll') scrollElementRef: ElementRef;
 

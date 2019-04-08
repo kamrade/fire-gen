@@ -1,0 +1,29 @@
+@import 'src/assets/scss/bootstrap/variables';
+@import 'src/assets/scss/bootstrap/mixins';
+
+.cpa-dropdown {
+  position: fixed;
+  z-index: $zindex-dropdown;
+  background-color: $white;
+  border-radius: $border-radius;
+  // padding: $spacer/2;
+  border: 1px solid $gray-200;
+  width: 400px;
+
+  .cpa-dropdown-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cpa-dropdown-item {
+    padding: $spacer/2;
+    cursor: pointer;
+    color: $gray-600;
+    transition: all .2s ease;
+    &:hover {
+      color: $gray-900;
+      background-color: $gray-100;
+    }
+  }
+}

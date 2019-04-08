@@ -27,6 +27,8 @@ import { TableComponent } from './components/table/table.component';
 import { FormControlComponent } from './components/form-control/form-control.component';
 import { FormLabelComponent } from './components/form-label/form-label.component';
 import { FormFeedbackComponent } from './components/form-feedback/form-feedback.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { DropdownDirective } from './components/dropdown/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { FormFeedbackComponent } from './components/form-feedback/form-feedback.
     FormControlComponent,
     FormLabelComponent,
     FormFeedbackComponent,
+    DropdownComponent,
+    DropdownDirective,
   ],
   imports: [
     CommonModule,
@@ -60,7 +64,8 @@ import { FormFeedbackComponent } from './components/form-feedback/form-feedback.
   ],
   entryComponents: [
     TooltipComponent,
-    LoaderInlineComponent
+    LoaderInlineComponent,
+    DropdownComponent
   ],
   exports: [
     HeaderComponent,
@@ -84,6 +89,8 @@ import { FormFeedbackComponent } from './components/form-feedback/form-feedback.
     FormControlComponent,
     FormLabelComponent,
     FormFeedbackComponent,
+    DropdownComponent,
+    DropdownDirective,
   ]
 })
 export class SharedModule { }
